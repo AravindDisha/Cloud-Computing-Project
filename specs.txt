@@ -1,0 +1,33 @@
+{
+    "docker_image": "acts",
+
+    "volume": {"name": "final","bind": "/acts"},
+    
+    "api calls": ["/api/v1/categories","/api/v1/categories/<categoryName>",
+    			"/api/v1/categories/<categoryName>/acts/size",
+    			"/api/v1/acts/upvote",
+    			"/api/v1/categories/<catName>/acts",
+    			"/api/v1/acts",
+    			"/api/v1/acts/<actId>",
+    			"/api/v1/acts/count"],
+
+    "polling": "/api/v1/_count",
+    
+    "health": "/api/v1/_health",
+    
+    "max_containers" : 10,
+
+    "scaling": {"20":1,
+    			"40":2,
+    			"60":3,
+    			"80":4,
+    			"100":5,
+    			"120":6,
+    			"140":7,
+    			"160":8,
+    			"180":9,
+    			"200":10},
+
+    "ports":[8000,8001,8002,8003,8004,8005,8006,8007,8008]
+
+}
