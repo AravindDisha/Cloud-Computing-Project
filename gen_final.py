@@ -183,7 +183,7 @@ def auto_scale():
             x = min([i for i in list(scale.keys()) if(i > poll)])
             num = max(0,scale[x])
         except:
-            num = len(ports)
+            num = maxC
 
         if(activeC < num):
             for i in range(activeC,num):
